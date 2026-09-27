@@ -46,20 +46,3 @@ function reveal() {
 window.addEventListener('scroll', reveal);
 // Trigger once on load
 reveal();
-
-// Navbar Hide/Show on Scroll
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
-    } else {
-        // Hide navbar if scrolled down past 100px
-        if (currentScrollPos > 100) {
-            document.getElementById("navbar").style.top = "-80px";
-            menu.classList.add('hidden');
-        }
-    }
-    prevScrollpos = currentScrollPos;
-    reveal();
-}
