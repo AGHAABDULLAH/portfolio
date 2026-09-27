@@ -6,10 +6,26 @@ btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
 });
 
-// Close mobile menu on link click
-document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        menu.classList.add('hidden');
+// Smooth Scrolling with Navbar Offset
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        menu.classList.add('hidden'); // Close mobile menu if open
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            const navbarHeight = 80; // 80px offset for the fixed navbar
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
@@ -41,10 +57,9 @@ window.onscroll = function() {
         // Hide navbar if scrolled down past 100px
         if (currentScrollPos > 100) {
             document.getElementById("navbar").style.top = "-80px";
-            // Also close mobile menu if open
             menu.classList.add('hidden');
         }
     }
     prevScrollpos = currentScrollPos;
-    reveal(); // Call reveal inside scroll
+    reveal();
 }
