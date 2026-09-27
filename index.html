@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agha Abdullah | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3b82f6',
+                        dark: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .project-card:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-bold text-2xl text-dark tracking-tighter">AGHA<span class="text-primary">ABDULLAH</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-primary transition font-medium">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-primary transition font-medium">Skills</a>
+                    <a href="#projects" class="text-gray-600 hover:text-primary transition font-medium">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary transition font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-3/5 text-center md:text-left">
+            <p class="text-primary font-semibold tracking-wide uppercase mb-3">Hello, I'm</p>
+            <h1 class="text-5xl md:text-7xl font-bold text-dark mb-6 tracking-tight leading-tight">
+                Agha Abdullah
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-600 mb-8">
+                <span class="bg-gradient-to-r from-primary to-purple-600 gradient-text">Data Scientist</span> & Software Engineer
+            </h2>
+            <p class="text-lg text-gray-500 mb-10 max-w-2xl leading-relaxed">
+                I specialize in building intelligent machine learning pipelines, complex spatial (GIS) database solutions, and robust software architectures that solve complex engineering problems.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="#projects" class="px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-500/30 text-center">View My Work</a>
+                <a href="#contact" class="px-8 py-4 bg-white text-dark border border-gray-200 rounded-lg font-semibold hover:bg-gray-50 transition text-center">Contact Me</a>
+            </div>
+        </div>
+        <div class="md:w-2/5 mt-16 md:mt-0 flex justify-center">
+            <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-blue-100 to-purple-100 flex items-center justify-center border-8 border-white shadow-2xl">
+                <!-- Placeholder for Avatar -->
+                <i class="fa-solid fa-user-astronaut text-8xl text-primary opacity-80"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark mb-12 text-center relative">
+                About Me
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-12 h-1 bg-primary rounded-full"></span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-dark">Bridging Software & Deep Analytics</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        I’m a versatile Data Scientist and Software Engineer with a strong foundation in predictive modeling, exploratory data analysis, object-oriented programming, and spatial database architecture.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        My technical background bridges the gap between software development and deep analytics. I specialize in building machine learning pipelines (Python, Scikit-learn, XGBoost), statistical models (R), and complex spatial queries using PostgreSQL and PostGIS.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        I am passionate about transforming raw, messy data into actionable insights and creating robust software architectures that solve complex engineering problems.
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
+                    <h4 class="text-xl font-semibold mb-6 text-dark border-b pb-4">Education</h4>
+                    <div class="mb-6">
+                        <p class="font-semibold text-primary">Bachelor of Science | Computer Engineering</p>
+                        <p class="text-sm text-gray-500">HITEC University Taxila, Department of Computer Engineering</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary">Big Data, Analytics & ICT Systems Development</p>
+                        <p class="text-sm text-gray-500">University of South Wales, Faculty of Computing, Engineering and Science</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark mb-16 text-center relative">
+                Technical Expertise
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-12 h-1 bg-primary rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Skill Category 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-brain text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-dark">Data Science & ML</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li><i class="fa-brands fa-python w-6"></i> Python</li>
+                        <li><i class="fa-solid fa-r w-6"></i> R Programming</li>
+                        <li><i class="fa-solid fa-chart-line w-6"></i> Scikit-Learn</li>
+                        <li><i class="fa-solid fa-table w-6"></i> Pandas & XGBoost</li>
+                    </ul>
+                </div>
+                <!-- Skill Category 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-earth-americas text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-dark">Databases & Spatial</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li><i class="fa-solid fa-database w-6"></i> PostgreSQL</li>
+                        <li><i class="fa-solid fa-map-location-dot w-6"></i> PostGIS</li>
+                        <li><i class="fa-solid fa-map w-6"></i> QGIS</li>
+                        <li><i class="fa-solid fa-server w-6"></i> SQL Analytics</li>
+                    </ul>
+                </div>
+                <!-- Skill Category 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-code text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-dark">Software Dev</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li><i class="fa-brands fa-java w-6"></i> Java</li>
+                        <li><i class="fa-brands fa-android w-6"></i> Android Dev</li>
+                        <li><i class="fa-solid fa-c w-6"></i> C++</li>
+                        <li><i class="fa-solid fa-window-maximize w-6"></i> GUI (Tkinter)</li>
+                    </ul>
+                </div>
+                <!-- Skill Category 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-microchip text-2xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-dark">Tools & Hardware</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li><i class="fa-brands fa-git-alt w-6"></i> Git & GitHub</li>
+                        <li><i class="fa-solid fa-book w-6"></i> Jupyter Notebooks</li>
+                        <li><i class="fa-solid fa-robot w-6"></i> Arduino (IoT)</li>
+                        <li><i class="fa-solid fa-terminal w-6"></i> Linux / Bash</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark mb-16 text-center relative">
+                Featured Projects
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-12 h-1 bg-primary rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 project-card flex flex-col h-full">
+                    <div class="p-8 flex-grow">
+                        <div class="text-xs font-bold text-primary uppercase tracking-wider mb-2">Python • Machine Learning</div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Open University Learning Analytics</h3>
+                        <p class="text-gray-600 mb-6 text-sm">Machine learning pipeline analyzing educational data to predict student outcomes and model Virtual Learning Environment engagement.</p>
+                    </div>
+                    <div class="px-8 pb-8 mt-auto">
+                        <a href="https://github.com/AGHAABDULLAH/ou-learning-analytics" target="_blank" class="text-primary font-medium hover:text-blue-700 flex items-center">
+                            View Repository <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 project-card flex flex-col h-full">
+                    <div class="p-8 flex-grow">
+                        <div class="text-xs font-bold text-primary uppercase tracking-wider mb-2">Python • OOP • GUI</div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Desktop Library Management System</h3>
+                        <p class="text-gray-600 mb-6 text-sm">Object-oriented desktop application featuring a modern CustomTkinter GUI for comprehensive library administration and JSON persistence.</p>
+                    </div>
+                    <div class="px-8 pb-8 mt-auto">
+                        <a href="https://github.com/AGHAABDULLAH/library-management-system" target="_blank" class="text-primary font-medium hover:text-blue-700 flex items-center">
+                            View Repository <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 project-card flex flex-col h-full">
+                    <div class="p-8 flex-grow">
+                        <div class="text-xs font-bold text-primary uppercase tracking-wider mb-2">PostgreSQL • PostGIS • Spatial</div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Welsh Healthcare Spatial Analysis</h3>
+                        <p class="text-gray-600 mb-6 text-sm">Advanced spatial SQL queries analyzing healthcare access, environmental hazards, and vulnerable demographics across Wales.</p>
+                    </div>
+                    <div class="px-8 pb-8 mt-auto">
+                        <a href="https://github.com/AGHAABDULLAH/welsh-healthcare-spatial-sql" target="_blank" class="text-primary font-medium hover:text-blue-700 flex items-center">
+                            View Repository <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 project-card flex flex-col h-full">
+                    <div class="p-8 flex-grow">
+                        <div class="text-xs font-bold text-primary uppercase tracking-wider mb-2">QGIS • GeoJSON</div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Cardiff Food Desert GIS Mapping</h3>
+                        <p class="text-gray-600 mb-6 text-sm">Geographic Information System (GIS) spatial analysis project mapping urban food deserts and fast-food density using buffers and heatmaps.</p>
+                    </div>
+                    <div class="px-8 pb-8 mt-auto">
+                        <a href="https://github.com/AGHAABDULLAH/cardiff-food-deserts-gis" target="_blank" class="text-primary font-medium hover:text-blue-700 flex items-center">
+                            View Repository <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 project-card flex flex-col h-full">
+                    <div class="p-8 flex-grow">
+                        <div class="text-xs font-bold text-primary uppercase tracking-wider mb-2">R • Linear Regression</div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Predictive Analytics in R</h3>
+                        <p class="text-gray-600 mb-6 text-sm">Dual-focus analytics project predicting healthcare billing costs and banking term deposit conversions using Decision Trees and Regression.</p>
+                    </div>
+                    <div class="px-8 pb-8 mt-auto">
+                        <a href="https://github.com/AGHAABDULLAH/predictive-analytics-r" target="_blank" class="text-primary font-medium hover:text-blue-700 flex items-center">
+                            View Repository <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 project-card flex flex-col h-full">
+                    <div class="p-8 flex-grow">
+                        <div class="text-xs font-bold text-primary uppercase tracking-wider mb-2">Arduino • C++ • IoT</div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Automated Railway Crossing IoT</h3>
+                        <p class="text-gray-600 mb-6 text-sm">Embedded systems project simulating an automated, sensor-driven railway crossing gate mechanism with LCD telemetry.</p>
+                    </div>
+                    <div class="px-8 pb-8 mt-auto">
+                        <a href="https://github.com/AGHAABDULLAH/railway-crossing-iot" target="_blank" class="text-primary font-medium hover:text-blue-700 flex items-center">
+                            View Repository <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://github.com/AGHAABDULLAH" target="_blank" class="inline-flex items-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition">
+                    <i class="fa-brands fa-github mr-2"></i> View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-8">Let's Build Something Together</h2>
+            <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+                Open to software engineering, data science, and spatial analytics opportunities. Let’s build intelligent, data-driven solutions!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+                <a href="mailto:aghaabdullah94@gmail.com" class="flex items-center justify-center px-8 py-4 bg-primary rounded-lg font-semibold hover:bg-blue-600 transition">
+                    <i class="fa-solid fa-envelope mr-2"></i> aghaabdullah94@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/aghaabdullah/" target="_blank" class="flex items-center justify-center px-8 py-4 bg-[#0A66C2] rounded-lg font-semibold hover:bg-[#004182] transition">
+                    <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn Profile
+                </a>
+            </div>
+            <div class="border-t border-gray-700 pt-8 mt-12">
+                <p class="text-gray-500 text-sm">
+                    &copy; <script>document.write(new Date().getFullYear())</script> Agha Abdullah. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
